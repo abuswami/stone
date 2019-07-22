@@ -1,0 +1,6 @@
+framework module Pods_stone_prodTests {
+  umbrella header "Pods-stone-prodTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
