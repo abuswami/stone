@@ -155,7 +155,191 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-33" y="-17"/>
+            <point key="canvasLocation" x="-33.333333333333336" y="-17.410714285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="q5a-HY-oEe">
+            <objects>
+                <viewController id="zeH-kz-Cy9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jby-Jc-aEi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location1" translatesAutoresizingMaskIntoConstraints="NO" id="4l9-IF-u1p">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="DE9-K0-eUy"/>
+                                    <constraint firstAttribute="width" constant="300" id="GG9-z0-yaA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZzO-Ta-qUg">
+                                <rect key="frame" x="50" y="628" width="314" height="50"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.35294117650000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6gX-gK-law"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
+                                <state key="normal" title="Allow access to location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QTU-Yk-NFt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's see if you are in our delivery zone." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eQ-tM-2ig">
+                                <rect key="frame" x="57" y="183" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="FwV-Rb-fym"/>
+                                    <constraint firstAttribute="height" constant="100" id="QVo-gW-Xqu"/>
+                                    <constraint firstAttribute="width" constant="300" id="UjW-tl-DbB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4l9-IF-u1p" firstAttribute="centerX" secondItem="jby-Jc-aEi" secondAttribute="centerX" id="DTf-Z1-TXG"/>
+                            <constraint firstItem="ZzO-Ta-qUg" firstAttribute="top" secondItem="4l9-IF-u1p" secondAttribute="bottom" constant="30" id="FCF-6y-bk6"/>
+                            <constraint firstItem="8eQ-tM-2ig" firstAttribute="centerX" secondItem="jby-Jc-aEi" secondAttribute="centerX" id="IWM-AM-ROW"/>
+                            <constraint firstItem="ZzO-Ta-qUg" firstAttribute="leading" secondItem="BNY-IT-h7v" secondAttribute="leading" constant="50" id="W5w-rQ-bf4"/>
+                            <constraint firstItem="4l9-IF-u1p" firstAttribute="centerY" secondItem="jby-Jc-aEi" secondAttribute="centerY" id="ssu-4B-I7J"/>
+                            <constraint firstItem="BNY-IT-h7v" firstAttribute="trailing" secondItem="ZzO-Ta-qUg" secondAttribute="trailing" constant="50" id="xI9-DL-ZJh"/>
+                            <constraint firstItem="4l9-IF-u1p" firstAttribute="top" secondItem="8eQ-tM-2ig" secondAttribute="bottom" constant="15" id="yWb-wU-jrb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BNY-IT-h7v"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTL-X9-5bL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907" y="-17"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nWM-VR-mJU">
+            <objects>
+                <viewController id="bOR-2h-DKW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q0V-K6-slZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="wRl-m9-WdR">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="3Ut-Sc-Fko"/>
+                                    <constraint firstAttribute="width" constant="300" id="fAj-Du-eGr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please upload a picture of your ID to verify your age." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byC-Ht-hFI">
+                                <rect key="frame" x="57" y="183" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="kVR-hZ-xRD"/>
+                                    <constraint firstAttribute="width" constant="300" id="r9Q-L3-rfN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJ3-Ph-bvC">
+                                <rect key="frame" x="57" y="628" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.35294117650000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="YdP-0F-SnM"/>
+                                    <constraint firstAttribute="height" constant="50" id="mRr-Mu-ndu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
+                                <state key="normal" title="Allow access to camera">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="naa-l6-kfM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wRl-m9-WdR" firstAttribute="top" secondItem="byC-Ht-hFI" secondAttribute="bottom" constant="15" id="1CH-oV-Ae2"/>
+                            <constraint firstItem="byC-Ht-hFI" firstAttribute="centerX" secondItem="Q0V-K6-slZ" secondAttribute="centerX" id="9xL-JG-cxq"/>
+                            <constraint firstItem="cJ3-Ph-bvC" firstAttribute="centerX" secondItem="Q0V-K6-slZ" secondAttribute="centerX" id="IlD-zR-2V4"/>
+                            <constraint firstItem="cJ3-Ph-bvC" firstAttribute="top" secondItem="wRl-m9-WdR" secondAttribute="bottom" constant="30" id="obh-il-F3T"/>
+                            <constraint firstItem="wRl-m9-WdR" firstAttribute="centerX" secondItem="Q0V-K6-slZ" secondAttribute="centerX" id="qdt-Ak-NVx"/>
+                            <constraint firstItem="wRl-m9-WdR" firstAttribute="centerY" secondItem="Q0V-K6-slZ" secondAttribute="centerY" id="yyn-6A-BsC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e89-4O-e6Z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ke-pr-q86" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1777" y="-17"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rgU-f9-bIw">
+            <objects>
+                <viewController id="zSH-eD-XED" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xTA-g5-gn0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="KUt-RZ-cFd">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="6BJ-jm-TB2"/>
+                                    <constraint firstAttribute="width" constant="300" id="6df-us-B09"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please provide your phone number." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWt-zF-BLp">
+                                <rect key="frame" x="57" y="158" width="300" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="0FQ-81-D4v"/>
+                                    <constraint firstAttribute="width" constant="300" id="cly-fD-hma"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(919)-612-2933" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ASa-we-QPu">
+                                <rect key="frame" x="57" y="628" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2I4-QR-p0Y"/>
+                                    <constraint firstAttribute="width" constant="300" id="7JR-Yy-alY"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ms-0N-A3v">
+                                <rect key="frame" x="57" y="708" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.35294117650000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6tb-Yy-h9j"/>
+                                    <constraint firstAttribute="width" constant="300" id="8AV-Vu-cOg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vls-9c-Ff7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zWt-zF-BLp" firstAttribute="centerX" secondItem="xTA-g5-gn0" secondAttribute="centerX" id="4DC-d2-4aJ"/>
+                            <constraint firstItem="ASa-we-QPu" firstAttribute="top" secondItem="KUt-RZ-cFd" secondAttribute="bottom" constant="30" id="J7W-5a-KVz"/>
+                            <constraint firstItem="ASa-we-QPu" firstAttribute="centerX" secondItem="xTA-g5-gn0" secondAttribute="centerX" id="OpK-gt-VKF"/>
+                            <constraint firstItem="KUt-RZ-cFd" firstAttribute="top" secondItem="zWt-zF-BLp" secondAttribute="bottom" constant="15" id="Ych-D4-Lk6"/>
+                            <constraint firstItem="KUt-RZ-cFd" firstAttribute="centerY" secondItem="xTA-g5-gn0" secondAttribute="centerY" id="Ywe-1p-Olg"/>
+                            <constraint firstItem="KUt-RZ-cFd" firstAttribute="centerX" secondItem="xTA-g5-gn0" secondAttribute="centerX" id="alo-Ja-zZm"/>
+                            <constraint firstItem="8Ms-0N-A3v" firstAttribute="centerX" secondItem="xTA-g5-gn0" secondAttribute="centerX" id="dgP-ZU-guz"/>
+                            <constraint firstItem="8Ms-0N-A3v" firstAttribute="top" secondItem="ASa-we-QPu" secondAttribute="bottom" constant="30" id="wIL-Pm-2yQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="27a-E9-PWt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1S-pM-miv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2625" y="-17"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="M4V-Gh-qNv">
@@ -190,7 +374,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSC-Jm-X8G">
-                                        <rect key="frame" x="50" y="789" width="314" height="29"/>
+                                        <rect key="frame" x="50" y="792" width="314" height="26"/>
                                         <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="14"/>
                                         <state key="normal" title="Have an account?">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,13 +394,13 @@
                                         <rect key="frame" x="20" y="239" width="374" height="340"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQt-or-0nt">
-                                                <rect key="frame" x="30" y="160" width="314" height="20"/>
+                                                <rect key="frame" x="30" y="162" width="314" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ilovecookies1996" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BDi-cl-6aS">
-                                                <rect key="frame" x="30" y="190" width="314" height="50"/>
+                                                <rect key="frame" x="30" y="188.5" width="314" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="IXc-9B-nLR"/>
                                                 </constraints>
@@ -225,13 +409,13 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpm-Yq-y6T">
-                                                <rect key="frame" x="30" y="255" width="314" height="20"/>
+                                                <rect key="frame" x="30" y="253.5" width="314" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10/26/1996" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9DT-c5-jnQ">
-                                                <rect key="frame" x="30" y="285" width="314" height="50"/>
+                                                <rect key="frame" x="30" y="280" width="314" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Nbz-NP-pKS"/>
                                                 </constraints>
@@ -240,13 +424,13 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylj-jH-DuW">
-                                                <rect key="frame" x="30" y="67.5" width="314" height="20"/>
+                                                <rect key="frame" x="30" y="73" width="314" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="abuswami@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="stB-HE-hQE">
-                                                <rect key="frame" x="30" y="95" width="314" height="50"/>
+                                                <rect key="frame" x="30" y="97" width="314" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="g6G-PV-JFP"/>
                                                 </constraints>
@@ -320,6 +504,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="id" width="502" height="366"/>
+        <image name="location1" width="300" height="366"/>
+        <image name="phone" width="545" height="483"/>
         <image name="stone_logo_black" width="382" height="52"/>
     </resources>
 </document>
