@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0C5463D7078A3BBC094AFC35 /* Pods_stone_prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA0AE3AF8A0D78269DFC96D /* Pods_stone_prod.framework */; };
+		1D487F6F22E69BAE000E0A94 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D487F6E22E69BAE000E0A94 /* AuthViewController.swift */; };
 		1D58DBF822E55DFE0085F1F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D58DBF722E55DFE0085F1F1 /* GoogleService-Info.plist */; };
 		1D58DBFA22E55F390085F1F1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D58DBF922E55F390085F1F1 /* SignUpViewController.swift */; };
-		1D58DBFC22E55F580085F1F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D58DBFB22E55F580085F1F1 /* LoginViewController.swift */; };
 		7063076C22E52FB600AB5EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063076B22E52FB600AB5EB2 /* AppDelegate.swift */; };
 		7063076E22E52FB600AB5EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063076D22E52FB600AB5EB2 /* ViewController.swift */; };
 		7063077122E52FB600AB5EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7063076F22E52FB600AB5EB2 /* Main.storyboard */; };
@@ -42,9 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D487F6E22E69BAE000E0A94 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		1D58DBF722E55DFE0085F1F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1D58DBF922E55F390085F1F1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		1D58DBFB22E55F580085F1F1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1D58DBFF22E56B760085F1F1 /* stone-prod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "stone-prod.entitlements"; sourceTree = "<group>"; };
 		2440CA9B5E78725CC927C5A6 /* Pods_stone_prodUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stone_prodUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BEE01FDA7E1FDCDB7B568A /* Pods-stone-prodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stone-prodUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-stone-prodUITests/Pods-stone-prodUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3537F9B52C115D8050E64D6C /* Pods-stone-prodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stone-prodTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-stone-prodTests/Pods-stone-prodTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,7 +105,7 @@
 			children = (
 				7063076D22E52FB600AB5EB2 /* ViewController.swift */,
 				1D58DBF922E55F390085F1F1 /* SignUpViewController.swift */,
-				1D58DBFB22E55F580085F1F1 /* LoginViewController.swift */,
+				1D487F6E22E69BAE000E0A94 /* AuthViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,6 +166,7 @@
 		7063076A22E52FB600AB5EB2 /* stone-prod */ = {
 			isa = PBXGroup;
 			children = (
+				1D58DBFF22E56B760085F1F1 /* stone-prod.entitlements */,
 				1D58DBF622E55B370085F1F1 /* Resources */,
 				1D58DBF522E55B340085F1F1 /* Views */,
 				1D58DBF422E55B2D0085F1F1 /* Controllers */,
@@ -276,6 +278,11 @@
 				TargetAttributes = {
 					7063076722E52FB600AB5EB2 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					7063077B22E52FB700AB5EB2 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -447,7 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D58DBFC22E55F580085F1F1 /* LoginViewController.swift in Sources */,
+				1D487F6F22E69BAE000E0A94 /* AuthViewController.swift in Sources */,
 				1D58DBFA22E55F390085F1F1 /* SignUpViewController.swift in Sources */,
 				7063076E22E52FB600AB5EB2 /* ViewController.swift in Sources */,
 				7063076C22E52FB600AB5EB2 /* AppDelegate.swift in Sources */,
@@ -626,8 +633,9 @@
 			baseConfigurationReference = 7004DD0EDC3CE7ADDCB23F67 /* Pods-stone-prod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "stone-prod/stone-prod.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3GA2KZT5V2;
+				DEVELOPMENT_TEAM = NNXM72S2HW;
 				INFOPLIST_FILE = "stone-prod/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -645,8 +653,9 @@
 			baseConfigurationReference = B008C74702BF357153E5AA3E /* Pods-stone-prod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "stone-prod/stone-prod.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3GA2KZT5V2;
+				DEVELOPMENT_TEAM = NNXM72S2HW;
 				INFOPLIST_FILE = "stone-prod/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

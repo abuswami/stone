@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Login View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="stone_prod" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AuthViewController" customModule="stone_prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,13 +37,13 @@
                                         <rect key="frame" x="20" y="239" width="374" height="340"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OJ-sO-492">
-                                                <rect key="frame" x="30" y="58" width="314" height="17"/>
+                                                <rect key="frame" x="30" y="58" width="314" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="abuswami@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fN-M4-Kbs">
-                                                <rect key="frame" x="30" y="82.5" width="314" height="50"/>
+                                                <rect key="frame" x="30" y="82" width="314" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Aju-9t-p5c"/>
                                                 </constraints>
@@ -52,13 +52,13 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLf-vj-L7G">
-                                                <rect key="frame" x="30" y="172.5" width="314" height="16.5"/>
+                                                <rect key="frame" x="30" y="172" width="314" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ilovecookies1996" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZG4-p4-3qJ">
-                                                <rect key="frame" x="30" y="196.5" width="314" height="50"/>
+                                                <rect key="frame" x="30" y="196" width="314" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="6a3-QJ-hW0"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="rNE-Rs-qhZ"/>
@@ -95,6 +95,9 @@
                                         <state key="normal" title="Go">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="handleLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DsK-Rd-9bB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ice-6f-n4z">
                                         <rect key="frame" x="50" y="792" width="314" height="26"/>
@@ -103,7 +106,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ufb-9b-0he" kind="show" id="IYx-DB-DSk"/>
+                                            <segue destination="ufb-9b-0he" kind="show" identifier="LoginToSignup" id="YGe-PR-xcS"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stone_logo_black" translatesAutoresizingMaskIntoConstraints="NO" id="Y7p-QT-ih2">
@@ -145,7 +148,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="goBtn" destination="sSH-xD-A5j" id="UV4-w2-sWG"/>
+                        <outlet property="emailField" destination="3fN-M4-Kbs" id="oqw-gp-Y1L"/>
+                        <outlet property="loginBtn" destination="sSH-xD-A5j" id="oBt-N6-CjH"/>
+                        <outlet property="passField" destination="ZG4-p4-3qJ" id="DrS-TC-5BJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -180,15 +185,18 @@
                                         <state key="normal" title="Sign Up!">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="handleSignup:" destination="ufb-9b-0he" eventType="touchUpInside" id="m9W-jU-D8u"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSC-Jm-X8G">
-                                        <rect key="frame" x="50" y="792" width="314" height="26"/>
+                                        <rect key="frame" x="50" y="789" width="314" height="29"/>
                                         <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="14"/>
                                         <state key="normal" title="Have an account?">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="GUk-Tu-19n"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="SignupToLogin" id="GUk-Tu-19n"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stone_logo_black" translatesAutoresizingMaskIntoConstraints="NO" id="63y-k1-BtG">
@@ -202,13 +210,13 @@
                                         <rect key="frame" x="20" y="239" width="374" height="340"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQt-or-0nt">
-                                                <rect key="frame" x="30" y="161.5" width="314" height="17"/>
+                                                <rect key="frame" x="30" y="160" width="314" height="20"/>
                                                 <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ilovecookies1996" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BDi-cl-6aS">
-                                                <rect key="frame" x="30" y="188.5" width="314" height="50"/>
+                                                <rect key="frame" x="30" y="190" width="314" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="IXc-9B-nLR"/>
                                                 </constraints>
@@ -217,13 +225,13 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpm-Yq-y6T">
-                                                <rect key="frame" x="30" y="253.5" width="314" height="17"/>
+                                                <rect key="frame" x="30" y="255" width="314" height="20"/>
                                                 <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10/26/1996" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9DT-c5-jnQ">
-                                                <rect key="frame" x="30" y="280.5" width="314" height="50"/>
+                                                <rect key="frame" x="30" y="285" width="314" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Nbz-NP-pKS"/>
                                                 </constraints>
@@ -232,13 +240,13 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylj-jH-DuW">
-                                                <rect key="frame" x="30" y="72.5" width="314" height="16.5"/>
+                                                <rect key="frame" x="30" y="67.5" width="314" height="20"/>
                                                 <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="abuswami@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="stB-HE-hQE">
-                                                <rect key="frame" x="30" y="96.5" width="314" height="50"/>
+                                                <rect key="frame" x="30" y="95" width="314" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="g6G-PV-JFP"/>
                                                 </constraints>
@@ -301,7 +309,9 @@
                         <viewLayoutGuide key="safeArea" id="4Wg-62-QjJ"/>
                     </view>
                     <connections>
-                        <outlet property="goBtn" destination="9tI-4z-2lu" id="QZd-Pk-uAz"/>
+                        <outlet property="bdayField" destination="9DT-c5-jnQ" id="0ef-iB-FUh"/>
+                        <outlet property="emailField" destination="stB-HE-hQE" id="nAf-XZ-eZT"/>
+                        <outlet property="pwdField" destination="BDi-cl-6aS" id="tPE-Yz-wSD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbL-8X-xqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
